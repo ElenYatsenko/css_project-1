@@ -23,6 +23,7 @@ body {
   display: inline-block;
   color: darkblue;
   background-color: aquamarine;
+  position: relative;
   /* transition: color 0.6s ease 0.2s; */
 
   /* transition-property: color, background-color;
@@ -39,22 +40,19 @@ body {
   right: 0;
   background-color: darkblue;
   transition: all 1s linear;
-  /* position: absolute;
-  right: 0;
-  z-index: 1; */
+  position: absolute;
 }
-
+.list-item::before {
+  top: -5px;
+}
+.list-item::after {
+  bottom: -5px;
+  left: 0;
+}
 .list-item:hover::after,
 .list-item:hover::before {
   width: 100%;
 }
-.list-item::after {
-  transform: translateY(2px);
-}
-.list-item::before {
-  transform: translateY(-2px);
-}
-
 .link {
   display: inline-block;
   padding: 5px 1em;
